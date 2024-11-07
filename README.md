@@ -6,10 +6,13 @@ Este repositório tem como principal função guardar os arquivos gerados durant
 
 ## Estrutura de Pastas
 
-`/0_componentes_html` # Primeiro módulo de aulas, aprendendo componentes HTML
-`/desafios` # Pastas de desafios propostos durante as aulas
-`/desafio1-cantor` # Desafio de construir uma página com tabelas
-`/desafio2-xadrez` # Desafio de replicar um tabuleiro de xadrez utilizando PHP
+    ├── aulas-web
+    │   ├── 0_componentes_html
+    │   ├── 1_login_session
+    │   ├── desafios
+    │   │   ├── desafio1-cantor
+    │   │   ├── desafio2-xadrez
+    │   │   └── desafio3-cantor-login
 
 ## Tecnologias Utilizadas
 
@@ -42,3 +45,4 @@ Para rodar os projetos localmente, siga os passos abaixo:
 
 -   **Desafio 1 - Cantor**: Página construída com tabelas para exibir informações sobre cantores.
 -   **Desafio 2 - Xadrez**: Tabuleiro de xadrez replicado utilizando PHP para gerar as peças dinamicamente.
+-   **Desafio 3 - Cantor com Login Session**: Criando uma login session para o codigo do Desafio 1 com login e logout funcionais.

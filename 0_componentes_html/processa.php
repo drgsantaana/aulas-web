@@ -85,6 +85,8 @@ if (!empty($_POST['rdbTecnico'])) {  //verifica se variavel existe na url
 	$tecnico = $_POST['rdbTecnico'];
 }
 
+$imagem = $_POST['imgImagem'];
+
 
 //exibicao de variaveis
 echo 'Codigo escondido: ' . $codigoEscondido . '<br>';
@@ -126,3 +128,5 @@ echo '</ul>';
 echo 'Materias favoritas: <br> ';
 echo 'Ensino medio: ' . $medio . '<br>';
 echo 'Ensino tecnico: ' . $tecnico . '<br>';
+
+echo 'Imagem: ' . $imagem . '<br>';

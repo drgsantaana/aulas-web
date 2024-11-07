@@ -7,7 +7,7 @@ Descrição: Desafio 1 - Utilizando tabelas criar uma pagina que parece com um s
 <html>
 
 <head>
-    <title>DESAFIO 1</title>
+    <title>AULA 0 - CONTROLES HTML</title>
     <style>
         * {
             padding: 0;
@@ -128,6 +128,9 @@ Descrição: Desafio 1 - Utilizando tabelas criar uma pagina que parece com um s
                     <tr>
                         <td>
                             <strong>VOCE NÃO DOAR O LUAN VAI TE PEGAR</strong>
+                            <br>
+                            <br>
+                            <a href="logout.php">SAIR DO SISTEMA</a><br>
                         </td>
                     </tr>
                 </table>

@@ -11,9 +11,10 @@ Descrição: 0 Componentes HTML - Introducao aos componentes HTML
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/html5.svg" type="image/svg">
+    <script src="scripts/index.js"></script>
     <title>0 CONTROLES HTML</title>
 
-    <style>
+    <!-- <style>
         div {
 
             display: flex;
@@ -22,7 +23,7 @@ Descrição: 0 Componentes HTML - Introducao aos componentes HTML
             justify-content: center;
             margin: 8px;
         }
-    </style>
+    </style> -->
 
 
 </head>
@@ -192,17 +193,34 @@ Descrição: 0 Componentes HTML - Introducao aos componentes HTML
                         </fieldset>
                     </td>
                 </tr>
+                <!-- controlhe de imagem -->
+                <tr>
+                    <td>Imagem:</td>
+                    <td>
+                        <input height="50px" type="image" src="assets/html5.svg" alt="Simbolo HTML" name="imgImagem" value="simbolohtml">
+                        <label for="imgImagem">Simbolo do html</label>
+                    </td>
+                </tr>
 
+                <tr>
+                    <td colspan="2" align="center">
+                        <table>
+                            <tr>
+                                <td><button name="btnMostrar" id="btnMostrar" class="btnMostrar" value="Mostrar" onclick="Alerta()" onmouseover="Muda()" onmouseout="Retorna()">Mostrar</button></td>
+                                <td><input type="reset" value="Limpar" id="btnLimpar" name="btnLimpar"></td>
+                                <td><input type="submit" value="Salvar" id="btnSalvar" name="btnSalvar"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
 
-
-
-                <!--componente de  botoes -->
+                <!-- componente de  botoes
                 <tr>
                     <td colspan="2" align="center">
                         <input type="reset" value="Limpar" id="btnLimpar" name="btnLimpar">
                         <input type="submit" value="Salvar" id="btnSalvar" name="btnSalvar">
                     </td>
-                </tr>
+                </tr> -->
 
             </table>
         </form>

@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/banner2.jpg');
+    background-size: contain;
+    color: #fff;
+}
+
+div form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+form input[type="submit"] {
+    background-color: rgb(100, 219, 90);
+    color: #fff;
+    cursor: pointer;
+}

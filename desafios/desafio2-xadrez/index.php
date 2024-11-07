@@ -10,7 +10,7 @@ Descrição: Desafio 2 - Utilizando php e tabelas criar um tabuleiro de xadrez c
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xadrez - Daniel</title>
+    <title>DESAFIO 2</title>
     <style>
         * {
             padding: 0;
@@ -57,51 +57,50 @@ Descrição: Desafio 2 - Utilizando php e tabelas criar um tabuleiro de xadrez c
         <h1>Xadrez dos cria</h1>
         <table class="tabuleiro">
             <?php
-            $pecas = [
-                'brancas' => [
-                    'torre' => '<img src="./assets/torreBranca.svg" alt="torreBranca">',
-                    'cavalo' => '<img src="./assets/cavaloBranca.svg" alt="cavaloBranca">',
-                    'bispo' => '<img src="./assets/bispoBranca.svg" alt="bispoBranco">',
-                    'rainha' => '<img src="./assets/rainhaBranca.svg" alt="rainhaBranca">',
-                    'rei' => '<img src="./assets/reiBranca.svg" alt="reiBranco">',
-                    'peao' => '<img src="./assets/peaoBranca.svg" alt="peaoBranco">'
-                ],
-                'pretas' => [
-                    'torre' => '<img src="./assets/torrePreta.svg" alt="torrePreta">',
-                    'cavalo' => '<img src="./assets/cavaloPreta.svg" alt="cavaloPreto">',
-                    'bispo' => '<img src="./assets/bispoPreta.svg" alt="bispoPreto">',
-                    'rainha' => '<img src="./assets/rainhaPreta.svg" alt="rainhaPreta">',
-                    'rei' => '<img src="./assets/reiPreta.svg" alt="reiPreto">',
-                    'peao' => '<img src="./assets/peaoPreta.svg" alt="peaoPreto">'
-                ]
-            ];
+			$pecas = [
+				'brancas' => [
+					'torre' => '<img src="./assets/torreBranca.svg" alt="torreBranca">',
+					'cavalo' => '<img src="./assets/cavaloBranca.svg" alt="cavaloBranca">',
+					'bispo' => '<img src="./assets/bispoBranca.svg" alt="bispoBranco">',
+					'rainha' => '<img src="./assets/rainhaBranca.svg" alt="rainhaBranca">',
+					'rei' => '<img src="./assets/reiBranca.svg" alt="reiBranco">',
+					'peao' => '<img src="./assets/peaoBranca.svg" alt="peaoBranco">'
+				],
+				'pretas' => [
+					'torre' => '<img src="./assets/torrePreta.svg" alt="torrePreta">',
+					'cavalo' => '<img src="./assets/cavaloPreta.svg" alt="cavaloPreto">',
+					'bispo' => '<img src="./assets/bispoPreta.svg" alt="bispoPreto">',
+					'rainha' => '<img src="./assets/rainhaPreta.svg" alt="rainhaPreta">',
+					'rei' => '<img src="./assets/reiPreta.svg" alt="reiPreto">',
+					'peao' => '<img src="./assets/peaoPreta.svg" alt="peaoPreto">'
+				]
+			];
 
-            $posicoesIniciais = [
-                0 => ['torre', 'cavalo', 'bispo', 'rainha', 'rei', 'bispo', 'cavalo', 'torre'],
-                1 => array_fill(0, 8, 'peao'),
-                6 => array_fill(0, 8, 'peao'),
-                7 => ['torre', 'cavalo', 'bispo', 'rainha', 'rei', 'bispo', 'cavalo', 'torre']
-            ];
+			$posicoesIniciais = [
+				0 => ['torre', 'cavalo', 'bispo', 'rainha', 'rei', 'bispo', 'cavalo', 'torre'],
+				1 => array_fill(0, 8, 'peao'),
+				6 => array_fill(0, 8, 'peao'),
+				7 => ['torre', 'cavalo', 'bispo', 'rainha', 'rei', 'bispo', 'cavalo', 'torre']
+			];
 
-            function gerarCelula($i, $j, $pecas, $posicoesIniciais)
-            {
-                $cor = ($i + $j) % 2 == 0 ? 'escuro' : 'claro';
-                if (isset($posicoesIniciais[$i])) {
-                    $peca = $posicoesIniciais[$i][$j];
-                    $corPeca = $i < 2 ? 'brancas' : 'pretas';
-                    return "<td class=\"$cor\">{$pecas[$corPeca][$peca]}</td>";
-                }
-                return "<td class=\"$cor\"></td>";
-            }
+			function gerarCelula($i, $j, $pecas, $posicoesIniciais) {
+				$cor = ($i + $j) % 2 == 0 ? 'escuro' : 'claro';
+				if (isset($posicoesIniciais[$i])) {
+					$peca = $posicoesIniciais[$i][$j];
+					$corPeca = $i < 2 ? 'brancas' : 'pretas';
+					return "<td class=\"$cor\">{$pecas[$corPeca][$peca]}</td>";
+				}
+				return "<td class=\"$cor\"></td>";
+			}
 
-            for ($i = 0; $i < 8; $i++) {
-                echo '<tr>';
-                for ($j = 0; $j < 8; $j++) {
-                    echo gerarCelula($i, $j, $pecas, $posicoesIniciais);
-                }
-                echo '</tr>';
-            }
-            ?>
+			for ($i = 0; $i < 8; $i++) {
+				echo '<tr>';
+				for ($j = 0; $j < 8; $j++) {
+					echo gerarCelula($i, $j, $pecas, $posicoesIniciais);
+				}
+				echo '</tr>';
+			}
+			?>
         </table>
     </div>
 </body>
