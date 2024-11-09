@@ -79,6 +79,10 @@
                 <h2>Login Session</h2>
                 <p>Módulo para aprender sobre sessões de login em sites.</p>
             </a>
+            <a href="2_upload" class="card">
+                <h2>Upload</h2>
+                <p>Módulo para aprender sobre upload de arquivos assincronos em sites.</p>
+            </a>
         </div>
         <!-- coluna direita: desafios -->
         <div class="column">
@@ -96,6 +100,10 @@
             <a href="desafios/desafio3-cantor-login" class="card">
                 <h2>Desafio 3 - Cantor Login</h2>
                 <p>Criando uma sessão de login para o site do Desafio 1, com login e logout funcionais.</p>
+            </a>
+            <a href="desafios/desafio4-carteirinha" class="card">
+                <h2>Desafio 4 - Carteirinha</h2>
+                <p>Gerador de carteirinhas utilizando upload assincrono</p>
             </a>
         </div>
 

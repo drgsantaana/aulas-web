@@ -3,6 +3,11 @@ Nome: Daniel Reis
 Curso: Engenharia de Computação - IFMG - Campus Bambui
 Descrição: Desafio 1 - Utilizando tabelas criar uma pagina que parece com um site de verdade com a tematica de um cantor
 ############################## -->
+<?php
+if (!isset($_SESSION['login'])) {
+	header('location: index.php');
+}
+?>
 
 <html>
 
