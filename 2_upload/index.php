@@ -16,7 +16,6 @@
 </head>
 <body>
     <h2>Carregar e Recortar Imagem</h2>
-    <input type="file" id="txtCaminhoImagem" accept="image/*">
     <br><br>
     <div>
         <img id="previsaoImagem" style="display:none;">
