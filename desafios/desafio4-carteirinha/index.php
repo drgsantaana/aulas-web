@@ -50,7 +50,6 @@ Descrição: Desafio 4 - Criar um formulário de cadastro com campos de texto e 
         const previsaoImagem = document.getElementById('previsaoImagem');
         const formCadastro = document.getElementById('formCadastro');
 
-        // Exibir a pré-visualização da imagem carregada
         txtCaminhoImagem.addEventListener('change', (event) => {
             const file = event.target.files[0];
             if (file) {
@@ -70,24 +69,22 @@ Descrição: Desafio 4 - Criar um formulário de cadastro com campos de texto e 
             }
         });
 
-        // Enviar o formulário
+       
         formCadastro.addEventListener('submit', (event) => {
-            event.preventDefault(); // Evita o envio padrão para manipular com JS
-
+            event.preventDefault(); 
             const formData = new FormData(formCadastro);
 
-            // Verificar se há uma imagem recortada (se não, o PHP atribui a default)
+            
             if (cropper) {
                 cropper.getCroppedCanvas().toBlob((blob) => {
                     formData.append('imgRecorte', blob, 'imgRecorte.png');
-                    enviarFormulario(formData); // Enviar com imagem recortada
+                    enviarFormulario(formData); 
                 });
             } else {
-                enviarFormulario(formData); // Enviar sem imagem recortada (o PHP atribui a default)
+                enviarFormulario(formData); 
             }
         });
 
-        // Função para enviar o formulário via fetch
         function enviarFormulario(formData) {
             fetch('cadastrar.php', {
                     method: 'POST',

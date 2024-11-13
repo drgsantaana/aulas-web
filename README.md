@@ -13,6 +13,7 @@ Este repositório tem como principal função guardar os arquivos gerados durant
     │   │   ├── desafio1-cantor
     │   │   ├── desafio2-xadrez
     │   │   └── desafio3-cantor-login
+    │   │   └── desafio4-carteirinha
 
 ## Tecnologias Utilizadas
 
@@ -46,3 +47,4 @@ Para rodar os projetos localmente, siga os passos abaixo:
 -   **Desafio 1 - Cantor**: Página construída com tabelas para exibir informações sobre cantores.
 -   **Desafio 2 - Xadrez**: Tabuleiro de xadrez replicado utilizando PHP para gerar as peças dinamicamente.
 -   **Desafio 3 - Cantor com Login Session**: Criando uma login session para o codigo do Desafio 1 com login e logout funcionais.
+-   **Desafio 4 - Carteirinha**: Formulário de cadastro com campos de texto e upload de imagem, com pré-visualização da imagem e recorte opcional no formato de carteirinha.
