@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +15,10 @@
         }
     </style>
 </head>
+
 <body>
     <h2>Carregar e Recortar Imagem</h2>
+    <input type="file" id="txtCaminhoImagem" accept="image/*">
     <br><br>
     <div>
         <img id="previsaoImagem" style="display:none;">
@@ -55,23 +58,24 @@
                     const formData = new FormData();
                     formData.append('imgRecorte', blob, 'imgRecorte.png');
                     fetch('upload.php', {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.redirectUrl) {
-                            window.location.href = data.redirectUrl;
-                        } else {
-                            alert('Erro: ' + data.error || 'Erro desconhecido.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Erro:', error);
-                    });
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.redirectUrl) {
+                                window.location.href = data.redirectUrl;
+                            } else {
+                                alert('Erro: ' + data.error || 'Erro desconhecido.');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erro:', error);
+                        });
                 });
             }
         });
     </script>
 </body>
+
 </html>
