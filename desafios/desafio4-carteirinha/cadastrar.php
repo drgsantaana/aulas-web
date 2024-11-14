@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (isset($_POST['txtNome'], $_POST['txtEmail'], $_POST['txtCpf'], $_POST['txtData'])) {
+if (!empty($_POST['txtNome']) && !empty($_POST['txtEmail']) && !empty($_POST['txtCpf']) && !empty($_POST['txtData'])) {
 	$nome = $_POST['txtNome'];
 	$email = $_POST['txtEmail'];
 	$cpf = $_POST['txtCpf'];
@@ -34,5 +34,5 @@ if (isset($_POST['txtNome'], $_POST['txtEmail'], $_POST['txtCpf'], $_POST['txtDa
 
 	echo json_encode(['redirectUrl' => 'carteirinha.php']);
 } else {
-	echo 'Dados incompletos.';
+	echo json_encode(['error' => 'Dados incompletos.']);
 }

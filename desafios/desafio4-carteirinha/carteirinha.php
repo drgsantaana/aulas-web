@@ -10,7 +10,7 @@ if (isset($_SESSION['txtNome'], $_SESSION['txtEmail'], $_SESSION['txtCpf'], $_SE
 	$imgRecorte = $_SESSION['imgRecorte'];
 
 	echo "<div class='container'>
-        <h1>Carteirinha</h1>
+        
     <div class='carteirinha'>
         <div class='carteirinha-header'>
             <h2>IFMG CAMPUS BAMBUI</h2>
@@ -36,11 +36,16 @@ if (isset($_SESSION['txtNome'], $_SESSION['txtEmail'], $_SESSION['txtCpf'], $_SE
 	session_unset();
 	session_destroy();
 } else {
-	echo "Nenhum dado encontrado. Por favor, faça o cadastro novamente.";
+	echo "<div class='container'> Nenhum dado encontrado. Por favor, faça o cadastro novamente. </div>";
 }
 ?>
 
 <style>
+    body {
+        background: rgb(174, 238, 214);
+        background: radial-gradient(circle, rgba(174, 238, 214, 1) 0%, rgba(148, 233, 153, 1) 100%);
+    }
+
     .carteirinha {
         width: 400px;
         height: 250px;

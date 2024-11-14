@@ -83,6 +83,10 @@
                 <h2>Upload</h2>
                 <p>Módulo para aprender sobre upload de arquivos assincronos em sites.</p>
             </a>
+            <a href="3_banco_simples" class="card">
+                <h2>Banco simples</h2>
+                <p>Módulo para aprender sobre conexoes com banco de dados simples.</p>
+            </a>
         </div>
         <!-- coluna direita: desafios -->
         <div class="column">
