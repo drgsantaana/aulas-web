@@ -109,6 +109,10 @@
                 <h2>Desafio 4 - Carteirinha</h2>
                 <p>Gerador de carteirinhas utilizando upload assincrono</p>
             </a>
+            <a href="desafios/desafio5-cadastro" class="card">
+                <h2>Desafio 5 - Cadastro</h2>
+                <p>Cadastrando funcionarios a equipes e projetos</p>
+            </a>
         </div>
 
 
