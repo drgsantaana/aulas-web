@@ -1,6 +1,11 @@
 <?php
+
+include 'components/navbar.php';
+
+
+
 require_once 'clsFuncionario.php';
-require_once 'clsEquipes.php';
+require_once 'clsEquipe.php';
 $funcionario = new clsFuncionario();
 $equipe = new clsEquipe();
 
@@ -12,32 +17,37 @@ $equipe = new clsEquipe();
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="./assets/icon.svg" type="image/svg">
 	<title>Desafio 5</title>
+
+	<style>
+		img {
+			width: 20px;
+			height: 20px;
+			margin: 0 10px;
+		}
+
+		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 200px;
+		}
+	</style>
 </head>
 
 <body>
+	<?php
+	renderNavbar();
+	?>
+
 	<div class="container">
-		<h1>Desafio 5</h1>
-		<div class="main-container">
-			<div class="column">
-				<a href="?acao=inserirFuncionario" class="card">
-					<h2>Inserir Funcionário</h2>
-					<p>Clique aqui para inserir um novo funcionário</p>
-				</a>
-				<a href="?acao=consultarFuncionario" class="card">
-					<h2>Consultar Funcionário</h2>
-					<p>Clique aqui para consultar os funcionários cadastrados</p>
-				</a>
-				<a href="?acao=inserirEquipe" class="card">
-					<h2>Inserir Equipe</h2>
-					<p>Clique aqui para inserir uma nova equipe</p>
-				</a>
-				<a href="?acao=consultarEquipe" class="card">
-					<h2>Consultar Equipe</h2>
-					<p>Clique aqui para consultar as equipes cadastradas</p>
-				</a>
-			</div>
-		</div>
+		<h1>Menu de Ações</h1>
+		<button class="btnMenu" onclick="window.location.href='./pages/cadastroFuncionario.php'"><img src="./assets/user.svg" alt="User">Cadastro de Funcionários</button>
+		<button class="btnMenu" onclick="window.location.href='./pages/cadastroEquipe.php'"><img src="./assets/team.svg" alt="Team">Cadastro de Equipes</button>
+		<button class="btnMenu" onclick="window.location.href='./pages/cadastroProjeto.php'"><img src="./assets/project.svg" alt="Project">Cadastro de Projetos</button>
+
 	</div>
 </body>
 

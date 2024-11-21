@@ -9,21 +9,29 @@ class clsEquipe {
 	}
 
 	public function inserir($nome) {
-		$sql = "INSERT INTO tb_equipes (nome) VALUES (?)";
+		$sql = "INSERT INTO tb_equipe (nome) VALUES (?)";
 		$parametros = [$nome];
 		$stmt = $this->conexao->executarConsulta($sql, $parametros);
 		return $stmt->affected_rows > 0;
 	}
 
 	public function selecionarTodos() {
-		$sql = "SELECT * FROM tb_equipes";
+		$sql = "SELECT * FROM tb_equipe";
 		$stmt = $this->conexao->executarConsulta($sql);
 		$resultado = $stmt->get_result();
 		return $resultado->fetch_all(MYSQLI_ASSOC);
 	}
 
+	public function selecionarPorId($id) {
+		$sql = "SELECT * FROM tb_equipe WHERE id = ?";
+		$parametros = [$id];
+		$stmt = $this->conexao->executarConsulta($sql, $parametros);
+		$resultado = $stmt->get_result();
+		return $resultado->fetch_assoc();
+	}
+
 	public function excluir($id) {
-		$sql = "DELETE FROM tb_equipes WHERE id = ?";
+		$sql = "DELETE FROM tb_equipe WHERE id = ?";
 		$parametros = [$id];
 		$stmt = $this->conexao->executarConsulta($sql, $parametros);
 		return $stmt->affected_rows > 0;
