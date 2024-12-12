@@ -1,9 +1,6 @@
 <?php
 
 include 'components/navbar.php';
-
-
-
 require_once 'clsFuncionario.php';
 require_once 'clsEquipe.php';
 $funcionario = new clsFuncionario();
@@ -25,12 +22,12 @@ $equipe = new clsEquipe();
 		img {
 			width: 20px;
 			height: 20px;
-			margin: 0 10px;
+			margin: 0 32px 0 16px;
 		}
 
 		button {
 			display: flex;
-			justify-content: center;
+			justify-content: left;
 			align-items: center;
 			width: 200px;
 		}

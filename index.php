@@ -87,6 +87,14 @@
                 <h2>Banco simples</h2>
                 <p>Módulo para aprender sobre conexoes com banco de dados simples.</p>
             </a>
+            <a href="4_banco_procedimental" class="card">
+                <h2>Banco Procedimental</h2>
+                <p>Módulo para aprender sobre conexoes com banco de dados procedimental.</p>
+            </a>
+            <a href="4_banco_versao_poo" class="card">
+                <h2>Banco Procedimental Versao POO</h2>
+                <p>Módulo para aprender sobre conexoes com banco de dados procedimental versão POO.</p>
+            </a>
         </div>
         <!-- coluna direita: desafios -->
         <div class="column">
